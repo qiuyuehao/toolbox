@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Limit : "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            tools:ignore="HardcodedText"/>
+
+        <EditText
+            android:id="@+id/edit_limit_min_adc_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:imeOptions="actionDone"
+            android:inputType="numberSigned"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:layout_weight="5"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="-"
+            android:textAlignment="center"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText"/>
+
+        <EditText
+            android:id="@+id/edit_limit_max_adc_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:imeOptions="actionDone"
+            android:inputType="numberSigned"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:layout_weight="5"
+            tools:ignore="LabelFor" />
+
+        <RadioButton
+            android:id="@+id/rbtn_cfg_en_adc_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="Use Test Cfg"
+            tools:ignore="HardcodedText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="  Result :    "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText"/>
+        <TextView
+            android:id="@+id/text_result_adc_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">SynaSensorTest</string>
+    <string name="copyright">Copyright (c) 2018 Synaptics Incorporated. All rights reserved.</string>
+    <!-- string for the synaptics device nodes -->
+    <string name="syna_dev_rmi">/dev/rmi</string>
+    <string name="syna_dev_tcm">/dev/tcm</string>
+    <string name="syna_dev_unknown">(!) unknown device</string>
+    <!-- string as the message -->
+    <string name="str_log_path_invalid">(!) the path is invalid</string>
+    <string name="str_log_path_ok">  * the path is writable</string>
+    <string name="str_saving_disabled">Disabled</string>
+    <string name="str_saving_enabled">Enabled</string>
+    <string name="str_test_ini_invalid">(!) file is not available</string>
+    <string name="str_default_test_ini">/sdcard/syna_test_cfg.ini</string>
+    <!-- string for touch inking in touch explorer -->
+    <string name="touch_inking_enabled">Inking Enabled</string>
+    <string name="touch_inking_disabled">Inking Disabled</string>
+    <!-- string for snr calculation -->
+    <string name="snr_msg_untouch_collect">Baseline Collecting …\n please DO NOT touch the screen</string>
+    <string name="snr_msg_to_touch">Please PUT a finger on the screen</string>
+    <string name="snr_msg_touch_collect">Touched Frame Collecting … </string>
+    <string name="snr_msg_collecting_done">Please Remove the touched finger</string>
+    <!-- production test result -->
+    <string name="tester_going">  Testing …  </string>
+    <string name="tester_pending">  Pending …  </string>
+    <string name="tester_pass">  PASS  </string>
+    <string name="tester_fail">  FAIL   </string>
+    <!-- production test items -->
+    <string name="tester_rmi_noise_test_rt02"> Noise Test (RT02) </string>
+    <string name="tester_rmi_full_raw_test_rt20"> Full Raw Cap. Test (RT20) </string>
+    <string name="tester_rmi_full_raw_test_rt92"> Full Raw Cap. Test (RT92) </string>
+    <string name="tester_rmi_ex_high_resistance_test_rt20"> Extended High Resistance Test (RT20) </string>
+    <string name="tester_rmi_ex_trx_short_test_rt26100"> Extended TRX Short Test (RT26 + RT100) </string>
+    <string name="tester_rmi_abs_open_test_rt63"> Abs Sensing Open Test (RT63) </string>
+    <string name="tester_rmi_adc_range_test_rt23"> ADC Range Test (RT23) </string>
+    <string name="tester_rmi_sensor_speed_test_rt22"> Sensor Speed Test (RT22) </string>
+    <string name="tester_rmi_tagsmoisture_test_rt76"> TAGs Moisture Test (RT76) </string>
+    <string name="tester_rmi_rt133_test_rt133"> RT133 Short Test (RT133) </string>
+    <string name="tester_rmi_abs_delta_test_rt59"> Abs Sensing Delta Test (RT59) </string>
+    <string name="tester_tcm_trx_trx_short_test_pt01"> TRx TRx Short Test (PT01) </string>
+    <string name="tester_tcm_trx_ground_test_pt03"> TRx Ground Test (PT03) </string>
+    <string name="tester_tcm_full_raw_test_pt05"> Full Raw Test (PT05) </string>
+    <string name="tester_tcm_ex_high_resistance_test_pt1d"> Extended High Resistance Test (PT05) </string>
+    <string name="tester_tcm_drt_test_pt07"> Dynamic Range Test (PT07) </string>
+    <string name="tester_tcm_noise_test_pt0a"> Noise Test (PT0A) </string>
+    <string name="tester_tcm_adc_range_test_pt11"> ADC Range Test (PT11) </string>
+    <string name="tester_tcm_abs_raw_test_pt12"> Abs Raw Cap Test (PT12) </string>
+    <string name="tester_tcm_hybrid_abs_noise_test_pt1d"> Hybrid Abs Noise Test (PT1D) </string>
+    <!-- string for command file -->
+    <string name="cmd_file_ok">OK</string>
+    <string name="cmd_file_ng">Invalid</string>
+    <!-- string for vivo factory mode -->
+    <string name="vivo_factory_msg"> 测试中\n不要触摸屏幕 </string>
+</resources>

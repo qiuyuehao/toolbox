@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <!-- function buttons -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <!-- button: identify  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_main_identify"
+                    android:layout_width="56dp"
+                    android:layout_height="47dp"
+                    app:srcCompat="@drawable/icon_id"
+                    tools:ignore="ContentDescription" />
+
+                <Button
+                    android:id="@+id/btn_main_identify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginTop="1dp"
+                    android:text="Identify"
+                    android:textAlignment="viewStart"
+                    android:textSize="17sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- button: touch explorer  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_main_touch_explorer"
+                    android:layout_width="55dp"
+                    android:layout_height="48dp"
+                    app:srcCompat="@drawable/icon_touch"
+                    tools:ignore="ContentDescription" />
+
+                <Button
+                    android:id="@+id/btn_main_touch_explorer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginTop="1dp"
+                    android:text="Touch Explorer"
+                    android:textAlignment="viewStart"
+                    android:textSize="17sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- button: read delta  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_main_img_delta"
+                    android:layout_width="55dp"
+                    android:layout_height="48dp"
+                    app:srcCompat="@drawable/icon_img"
+                    tools:ignore="ContentDescription" />
+
+                <Button
+                    android:id="@+id/btn_main_img_delta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginTop="1dp"
+                    android:text="Diagnostics - Delta Image"
+                    android:textAlignment="viewStart"
+                    android:textSize="17sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- button: read raw  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_main_img_raw"
+                    android:layout_width="55dp"
+                    android:layout_height="48dp"
+                    app:srcCompat="@drawable/icon_img"
+                    tools:ignore="ContentDescription" />
+
+                <Button
+                    android:id="@+id/btn_main_img_raw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginTop="1dp"
+                    android:text="Diagnostics - Raw Image"
+                    android:textAlignment="viewStart"
+                    android:textSize="17sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- button: calculate snr  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_main_img_snr"
+                    android:layout_width="55dp"
+                    android:layout_height="48dp"
+                    app:srcCompat="@drawable/icon_img"
+                    tools:ignore="ContentDescription" />
+
+                <Button
+                    android:id="@+id/btn_main_img_snr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginTop="1dp"
+                    android:text="Diagnostics - SNR Evaluation"
+                    android:textAlignment="viewStart"
+                    android:textSize="17sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- button: production test  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_main_production_test"
+                    android:layout_width="55dp"
+                    android:layout_height="48dp"
+                    app:srcCompat="@drawable/icon_test"
+                    tools:ignore="ContentDescription" />
+
+                <Button
+                    android:id="@+id/btn_main_production_test"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginTop="1dp"
+                    android:text="Production Test"
+                    android:textAlignment="viewStart"
+                    android:textSize="17sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- button: syna raw commands -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_main_raw_comamnds"
+                    android:layout_width="55dp"
+                    android:layout_height="48dp"
+                    app:srcCompat="@drawable/icon_syna_page"
+                    tools:ignore="ContentDescription" />
+
+                <Button
+                    android:id="@+id/btn_main_raw_comamnds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginTop="1dp"
+                    android:text="Run Commands"
+                    android:textAlignment="viewStart"
+                    android:textSize="17sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- copyright -->
+    <TextView
+        android:id="@+id/copyright"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/copyright"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>
