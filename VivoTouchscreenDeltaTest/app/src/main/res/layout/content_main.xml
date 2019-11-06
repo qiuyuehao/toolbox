@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.vivotouchscreen.synadeltadiff.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/text_cpoyright"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/copyright"
+        android:textAlignment="center"
+        android:textColor="#585858"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <Button
+        android:id="@+id/button_start"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="START"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:id="@+id/layout_rt_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17">
+
+        <TextView
+            android:id="@+id/text_rt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report Type :      "
+            android:textColor="@android:color/darker_gray"
+            tools:ignore="HardcodedText" />
+
+        <Spinner
+            android:id="@+id/spinner_rt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_threshold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintTop_toBottomOf="@+id/layout_rt_type">
+        <TextView
+            android:id="@+id/text_threshold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Threshold :  "
+            android:textColor="@android:color/darker_gray"
+            tools:ignore="HardcodedText" />
+        <EditText
+            android:id="@+id/edit_threshold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="#d8d8d8"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_recordtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintTop_toBottomOf="@+id/layout_threshold">
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recording Time (seconds) :  "
+            android:textColor="@android:color/darker_gray"
+            tools:ignore="HardcodedText" />
+        <EditText
+            android:id="@+id/edit_recordtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="#d8d8d8"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_logpath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintTop_toBottomOf="@+id/layout_recordtime">
+        <TextView
+            android:id="@+id/text_pathlog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Path of Log File :  "
+            android:textColor="@android:color/darker_gray"
+            tools:ignore="HardcodedText" />
+        <EditText
+            android:id="@+id/edit_pathlog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:text=" "
+            android:textColor="#d8d8d8"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_spilt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="  --- Runtime Information --- "
+        android:textAlignment="center"
+        android:textColor="#6e6e6e"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_cpoyright"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_logpath"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/text_cpoyright"
+        app:layout_constraintTop_toBottomOf="@+id/text_spilt"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <LinearLayout
+        android:id="@+id/layout_id_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar">
+        <TextView
+            android:id="@+id/text_asic_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="[ Device ID ]  "
+            android:textColor="@android:color/darker_gray"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/text_asic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="@android:color/darker_gray"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/text_fw_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="[ Build ID ]  "
+            android:textColor="@android:color/darker_gray"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/text_fw_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="@android:color/darker_gray"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_frames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_id_info">
+        <TextView
+            android:id="@+id/text_total_frame_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="[ Total Frames ]  "
+            android:textColor="@android:color/darker_gray"
+            android:layout_weight="1.2"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/text_total_frames"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="@android:color/darker_gray"
+            android:layout_weight="0.8"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/text_frame_gear_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="[ Frames per Gear ] "
+            android:textColor="@android:color/darker_gray"
+            android:layout_weight="1.4"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/text_frame_gear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="@android:color/darker_gray"
+            android:layout_weight="0.6"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_frame_cap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_frames">
+        <TextView
+            android:id="@+id/text_frame_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="[ Captured Frames ]  "
+            android:textColor="@android:color/darker_gray"
+            android:layout_weight="1.4"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/text_frames"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="@android:color/darker_gray"
+            android:layout_weight="0.6"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/text_fail_count_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="[ Failed Frames ]  "
+            android:textColor="@android:color/darker_gray"
+            android:layout_weight="1.4"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/text_fail_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="@android:color/darker_gray"
+            android:layout_weight="0.6"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_gears"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_frame_cap">
+        <TextView
+            android:id="@+id/text_all_gear_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="[ Freq. Gears ]  "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/text_all_gears"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/text_gear_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="[ Gear Testing ]  "
+            android:textColor="@android:color/darker_gray"
+            android:layout_weight="1.2"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/text_current_gear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="@android:color/darker_gray"
+            android:layout_weight="0.8"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_gears">
+        <TextView
+            android:id="@+id/text_file_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[ Log File ]  "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/text_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_log">
+        <TextView
+            android:id="@+id/text_result_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[ Result ]  "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/text_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_result_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_result">
+        <TextView
+            android:id="@+id/text_result_detail_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[ Result Detail ]  "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/text_result_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

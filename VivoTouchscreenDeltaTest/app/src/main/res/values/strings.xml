@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">VivoTouchscreenDeltaTest</string>
+    <string name="action_about">About</string>
+    <string name="copyright">Copyright (c) 2017 Synaptics Incorporated. All rights reserved.</string>
+    <string name="testing">正在测试中,请勿触碰\n(under test, do not touch)</string>
+    <string name="testing_pass">PASS</string>
+    <string name="testing_fail">FAIL</string>
+    <string name="btn_str_default">START</string>
+    <string name="btn_str_running">press VOL_UP to terminate </string>
+</resources>

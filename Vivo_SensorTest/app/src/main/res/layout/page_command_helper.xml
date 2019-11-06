@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <TextView
+        android:id="@+id/text_cmd_txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Please input the commands text file (.txt)"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_cmd_btn_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText,NestedWeights,SmallSp" />
+
+    <LinearLayout
+        android:id="@+id/layout_txt_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/layout_cmd_btn_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_cmd_txt_title"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="File :"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,RtlHardcoded,NestedWeights" />
+
+        <EditText
+            android:id="@+id/edit_cmd_txt_file"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:layout_marginLeft="4dp"
+            android:ems="20"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:text=""
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,RtlHardcoded,LabelFor" />
+
+        <TextView
+            android:id="@+id/text_cmd_txt_file_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ok"
+            android:textAlignment="center"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="11sp"
+            tools:ignore="HardcodedText,NestedWeights,RtlHardcoded,SmallSp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_property_log_saving"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Property of Log Saving"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_cmd_btn_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_txt_file"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <LinearLayout
+        android:id="@+id/layout_property_log_saving"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/layout_cmd_btn_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_property_log_saving"
+        app:layout_constraintVertical_bias="0.0">
+
+        <CheckBox
+            android:id="@+id/cbtn_cmd_log_saving"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/text_cmd_log"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Folder: "
+            android:layout_marginLeft="4dp"
+            android:layout_weight="2"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText,RtlHardcoded,NestedWeights" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_cmd_result_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:text=" --- Result ---"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_cmd_btn_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_property_log_saving"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText,NestedWeights,SmallSp" />
+
+    <ScrollView
+        android:id="@+id/layout_cmd_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        app:layout_constraintBottom_toTopOf="@+id/layout_cmd_btn_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_cmd_result_title"
+        app:layout_constraintVertical_bias="0.26">
+
+        <TextView
+            android:id="@+id/text_cmd_window"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,NestedWeights,SmallSp" />
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/layout_cmd_btn_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cmd_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:text="Run"
+                android:textAllCaps="true"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <Button
+                android:id="@+id/btn_cmd_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:text="exit"
+                android:textAllCaps="true"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

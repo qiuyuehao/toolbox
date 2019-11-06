@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.vivotouchscreen.sensortestsyna3706.MainActivity">
+    <item
+        android:id="@+id/menu_info"
+        android:orderInCategory="100"
+        android:title="APK Version"
+        android:visible="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText"/>
+    <item
+        android:id="@+id/menu_usage"
+        android:orderInCategory="100"
+        android:title="How to Use"
+        android:visible="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText"/>
+    <item
+        android:id="@+id/menu_settings"
+        android:orderInCategory="100"
+        android:title="General Settings"
+        android:visible="true"
+        android:textSize="16sp"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText"/>
+</menu>

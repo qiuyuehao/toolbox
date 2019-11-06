@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+
+    <LinearLayout
+        android:id="@+id/layout_test_cfg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/layout_test_btn_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cbtn_test_cfg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Load Test Configuration File"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/test_cfg_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/str_test_ini_invalid"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="10sp"
+                tools:ignore="HardcodedText,NestedWeights,SmallSp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_test_property_log_saving"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/layout_test_btn_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_test_cfg"
+        app:layout_constraintVertical_bias="0.0">
+
+        <CheckBox
+            android:id="@+id/cbtn_test_log_saving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/text_test_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:enabled="false"
+            android:text="Folder: "
+            android:textSize="12sp"
+            tools:ignore="HardcodedText,RtlHardcoded,NestedWeights" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_test_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Test Cases"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_test_btn_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_test_property_log_saving"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText" />
+
+
+    <ScrollView
+        android:id="@+id/layout_test_scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:fadeScrollbars="false"
+        app:layout_constraintBottom_toTopOf="@+id/layout_test_btn_group"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_test_title"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- test item 1 -->
+            <LinearLayout
+                android:id="@+id/layout_test_item_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cbtn_test_item_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Test Item 1"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- test item 2 -->
+            <LinearLayout
+                android:id="@+id/layout_test_item_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cbtn_test_item_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Test Item 2"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- test item extended high resistance -->
+            <LinearLayout
+                android:id="@+id/layout_test_ex_high_resistance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cbtn_test_ex_high_resistance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Extended High Resistance Test "
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- test item abs sensing open -->
+            <LinearLayout
+                android:id="@+id/layout_test_abs_open"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cbtn_test_abs_open"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Abs Sensing Open Test "
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- test item extended trx short -->
+            <LinearLayout
+                android:id="@+id/layout_test_ex_trx_short"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cbtn_test_ex_trx_short"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Extended TRX Short Test"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- test item adc range -->
+            <LinearLayout
+                android:id="@+id/layout_test_adc_range"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cbtn_test_adc_range"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" ADC Range Test "
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- test item sensor speed -->
+            <LinearLayout
+                android:id="@+id/layout_test_sensor_speed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cbtn_test_sensor_speed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" ADC Range Test "
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- test item tags_moisture -->
+            <LinearLayout
+                android:id="@+id/layout_test_tagsmoisture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cbtn_test_tagsmoisture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" TAGs Moisture "
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- test item rt133 -->
+            <LinearLayout
+                android:id="@+id/layout_test_rt133"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cbtn_test_rt133"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" RT133 "
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- test item abs sensing delta -->
+            <LinearLayout
+                android:id="@+id/layout_test_abs_delta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cbtn_test_abs_delta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Abs Sensing Delta Test "
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/layout_test_btn_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_test_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:text="Start Test"
+                android:textAllCaps="true"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <Button
+                android:id="@+id/btn_test_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:text="exit"
+                android:textAllCaps="true"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
